@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
 	def about
 	end
+
+	def search
+    if !params[:user].nil?
+      @username = params[:user]["name"]
+    end
+  end
 end
