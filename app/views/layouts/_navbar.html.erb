@@ -8,8 +8,10 @@
       <!-- <button type="submit">Submit</button> -->
     <!-- </form> -->
     <%= form_for :user, url: search_path, method: "get" do |f| %>
-      <%= f.text_field :name, type: 'text', placeholder: 'Twitter handle', name: 'search' %>
-      <%= f.button 'Submit', type: 'submit' %>
+      <%= f.label "pss" %>
+      <%= f.text_field :name, type: 'text', placeholder: 'Twitter handle' %>
+      <%= f.submit 'Submit!!' %>
+      <%#= f.button 'Submit', type: 'submit' %> 
   </div>
 <% end %>
   </div>

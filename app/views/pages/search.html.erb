@@ -1,0 +1,8 @@
+<%= render 'layouts/navbar' %>
+
+<% if !@username.blank? %>
+	<% CLIENT.user_timeline(@username, count: 25).each do |tweet| %>
+	<%= tweet.text %></br></br>
+	<% end %>
+<% end %>
+</div>
