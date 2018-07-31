@@ -1,23 +1,37 @@
 <%= render 'layouts/navbar' %>
 
-<% if @username.blank? || CLIENT.user_timeline(@username, count: 25).nil? %>
+<% begin %>
+	<% CLIENT.user(@username) %>
+
+<% rescue %>	
 	<div class="row" style="margin-top: 130px; margin-bottom: 130px">
 		<div class="col"></div>
-		<div class="shadow-lg p-3 mb-5 bg-white rounded col-7">This user handle does not exist or it does not contain any tweets</div>
+		<div class="shadow-lg p-3 mb-5 bg-white rounded col-7">This user handle does not exist!</div>
 		<div class="col"></div>
 	</div>
+
 <% else %>
-	<div class="row" style="margin-top: 20px;">
-		<div class="col"></div>
-		<div class="shadow-lg p-3 mb-5 bg-white rounded col-5"><%= @username + "'s 25 most recent tweets are shown below" %></div>
-		<div class="col"></div>
-	</div>
-	<% CLIENT.user_timeline(@username, count: 25).each do |tweet| %>
-		<div class="row">
+	<% begin %>
+		<% tweets = CLIENT.user_timeline(@username, count: 25) %>
+	<% rescue%>	
+		<div class="row" style="margin-top: 130px; margin-bottom: 130px">
 			<div class="col"></div>
-			<div class="shadow-lg p-3 mb-5 bg-white rounded col-7"><%= tweet.text %></div>
+			<div class="shadow-lg p-3 mb-5 bg-white rounded col-7">There is something wrong with this user handle!</div>
 			<div class="col"></div>
 		</div>
+	<% else %>
+		<div class="row" style="margin-top: 20px;">
+			<div class="col"></div>
+			<div class="shadow-lg p-3 mb-5 bg-white rounded col-5"><%="Most recent tweets of " + @username + " are shown below" %></div>
+			<div class="col"></div>
+		</div>
+		<% tweets.each do |tweet| %>
+			<div class="row">
+				<div class="col"></div>
+				<div class="shadow-lg p-3 mb-5 bg-white rounded col-7"><%= tweet.text %></div>
+				<div class="col"></div>
+			</div>
+		<% end %>
 	<% end %>
 <% end %>
 

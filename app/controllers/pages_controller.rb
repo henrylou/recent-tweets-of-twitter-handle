@@ -8,8 +8,7 @@ class PagesController < ApplicationController
 	def search
     if !params[:user].nil?
       @username = params[:user][:name]
-    else
-    	@username = 'COZZiLou'
+      @username.strip
     end
   end
 end
