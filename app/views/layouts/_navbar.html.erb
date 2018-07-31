@@ -1,17 +1,10 @@
 <div class="topnav">
   <%= link_to 'Home', root_path, class: 'active' %>
   <%= link_to 'About', about_path %>
-  <a href="#contact">Contact</a>
   <div class="search-container">
-    <!-- <form action="/action_page.php"> -->
-      <!-- <input type="text" placeholder="Search.." name="search"> -->
-      <!-- <button type="submit">Submit</button> -->
-    <!-- </form> -->
-    <%= form_for :user, url: search_path, method: "get" do |f| %>
-      <%= f.label "pss" %>
+      <%= form_for :user, url: search_path, method: "get" do |f| %>
       <%= f.text_field :name, type: 'text', placeholder: 'Twitter handle' %>
-      <%= f.submit 'Submit!!' %>
-      <%#= f.button 'Submit', type: 'submit' %> 
+      <%= f.button 'Submit', type: 'submit' %> 
   </div>
 <% end %>
   </div>

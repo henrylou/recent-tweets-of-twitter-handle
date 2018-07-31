@@ -10,11 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ @import "bootstrap";
 
 * {box-sizing: border-box;}
+
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+}
 
 body {
   margin: 0;
@@ -87,4 +91,34 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px;
+  /*color: #777;*/
+  color: #777;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer a:hover {
+  color: #AFEEEE;
+}
+
+.footer small {
+  float: left;
+}
+
+.footer ul {
+  float: right;
+  list-style: none;
+}
+
+.footer ul li {
+  float: left;
+  margin-left: 15px;
 }

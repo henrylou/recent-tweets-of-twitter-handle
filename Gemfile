@@ -37,6 +37,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Use Twitter API
 gem 'twitter', '~> 6.2.0'
+# Use Bootstrap
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
+
 gem 'figaro' 
 gem 'randumb'
 
