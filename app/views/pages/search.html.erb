@@ -20,9 +20,9 @@
 			<div class="col"></div>
 		</div>
 	<% else %>
-		<div class="row" style="margin-top: 20px;">
+		<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 			<div class="col"></div>
-			<div class="shadow-lg p-3 mb-5 bg-white rounded col-5"><%="Most recent tweets of " + @username + " are shown below" %></div>
+			<div class="col" align="center"><%= @username %></div>
 			<div class="col"></div>
 		</div>
 		<% tweets.each do |tweet| %>
