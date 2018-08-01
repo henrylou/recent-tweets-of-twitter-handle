@@ -1,24 +1,7 @@
-# README
+# Recent Tweets of Twitter Handle 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web app takes a user's Twitter handle and displays that user's 25 most recent tweets using Twitter API.
 
-Things you may want to cover:
+## Demo
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The demo website is https://recent-tweets-hengyu.herokuapp.com/
