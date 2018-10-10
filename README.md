@@ -4,4 +4,4 @@ This web app takes a user's Twitter handle and displays that user's 25 most rece
 
 ## Demo
 
-The demo website is https://recent-tweets-hengyu.herokuapp.com/
+The demo website is https://recent-tweets-hengyu.herokuapp.com
