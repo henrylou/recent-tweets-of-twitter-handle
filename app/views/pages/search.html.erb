@@ -1,5 +1,3 @@
-<%= render 'layouts/navbar' %>
-
 <% begin %>
 	<% CLIENT.user(@username) %>
 
@@ -22,7 +20,7 @@
 	<% else %>
 		<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
 			<div class="col"></div>
-			<div class="col" align="center"><%= @username %></div>
+			<div class="col" align="center"><h4><%= @username %></h4></div>
 			<div class="col"></div>
 		</div>
 		<% tweets.each do |tweet| %>
@@ -34,5 +32,3 @@
 		<% end %>
 	<% end %>
 <% end %>
-
-<%= render 'layouts/footer' %>
