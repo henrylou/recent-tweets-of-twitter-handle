@@ -17,17 +17,46 @@ body {
   font-family: "Courier";
 }
 
-.welcome {
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home1 {
+  background-size: fix;
+  background-image: asset-url('bg2.png');
+}
+
+.home2 {
   background-size: fix;
   background-image: asset-url('bg.jpg');
+}
+
+.about-bg {
+  background-image: asset-url('bg.jpg');
+}
+
+.bg-image-full {
+  /*background: no-repeat center center scroll;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.search-bg {
+  background-image: asset-url('bg2.png');
 }
 
 .center {
   text-align: center;
 }
 
-.jumbotron {
-  margin-top: 15%; 
-  margin-bottom: 15%;
-  background: rgba(22, 22, 22, 0);
-} 
