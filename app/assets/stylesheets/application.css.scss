@@ -17,6 +17,10 @@ body {
   font-family: "Courier";
 }
 
+.footer {
+  
+}
+
 .carousel-item {
   height: 100vh;
   min-height: 300px;
@@ -39,24 +43,41 @@ body {
 
 .about-bg {
   background-image: asset-url('bg.jpg');
-}
-
-.bg-image-full {
-  /*background: no-repeat center center scroll;*/
-  background-position: center;
+  height: 100vh;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, #2a95ed 0%, #42c5f4 100%);
+  /*background: url('http://placehold.it/1920x1080'); */
   background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
 }
 
 .search-bg {
-  background-image: asset-url('bg2.png');
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, #2a95ed 0%, #42c5f4 100%);
+  /*background: url('http://placehold.it/1920x1080'); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .custom-bg {
+    padding-top: calc(10rem + 55px);
+    padding-bottom: 10rem;
+  }
 }
 
 .center {
   text-align: center;
 }
-

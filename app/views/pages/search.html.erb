@@ -1,27 +1,29 @@
-<div class="py-5 search-bg bg-image-full">
+<div class="search-bg">
 	<% begin %>
 		<% CLIENT.user(@username) %>
 
 	<% rescue %>	
-		<div class="row" style="margin-top: 10%; margin-bottom: 10%">
-			<div class="col"></div>
-			<div class="shadow-lg p-3 mb-5 bg-white rounded col-7">This user handle does not exist!</div>
-			<div class="col"></div>
-		</div>
-
+		<div class="container mt-5">
+	    <h2 class="text-center">I am sorry!</h2>
+	    <div class="row mt-5">
+	      <div class="col"></div>
+	      <div class="shadow-lg p-3 mb-5 bg-white rounded col-7">This user handle does not exist!</div>
+	      <div class="col"></div>
+	    </div>
+	  </div>
 	<% else %>
 		<% begin %>
 			<% tweets = CLIENT.user_timeline(@username, count: 25) %>
 		<% rescue%>	
-			<div class="row" style="margin-top: 130px; margin-bottom: 130px">
+			<div class="row">
 				<div class="col"></div>
 				<div class="shadow-lg p-3 mb-5 bg-white rounded col-7">There is something wrong with this user handle!</div>
 				<div class="col"></div>
 			</div>
 		<% else %>
-			<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+			<div class="row mt-3">
 				<div class="col"></div>
-				<div class="col" align="center"><h4><%= @username %></h4></div>
+				<div class="col text-center"><h4><%= @username %></h4></div>
 				<div class="col"></div>
 			</div>
 			<% tweets.each do |tweet| %>
@@ -33,4 +35,4 @@
 			<% end %>
 		<% end %>
 	<% end %>
-</div>
+</div> 
